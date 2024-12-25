@@ -19,6 +19,7 @@ const LoggerController = require("./controllers/LoggerController");
 const audioFileUpload = require("./api/imageAPIs/songsAudioUpload");
 const imageFileUpload = require("./api/imageAPIs/songsImageUpload");
 const userProfileFileUpload = require("./api/imageAPIs/userProfileUpload");
+const fetchRegisteredUser = require("./api/userAPI/fetchRegisteredUser");
 
 const app = express();
 
@@ -45,6 +46,8 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyparser.json());
+
+app.get("/usersregister", fetchRegisteredUser);
 
 // Songs - Images Storage REST API CALL
 app.post(
