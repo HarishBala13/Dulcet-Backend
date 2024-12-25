@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+const { MongoClient } = require('mongodb');
 
 const mongoUrl = process.env.MONGODB_URL || "";
 const dbName = process.env.MONGODB_DATABASE_NAME || "";
