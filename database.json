@@ -1,0 +1,296 @@
+{
+    "topSongs": [
+      {
+        "movieName": "LEO",
+        "LEO": [
+          {
+            "images": "/assets/songs-assets/songs-images/LEO-Naa-Ready-Song.png",
+            "movie_name": "LEO",
+            "song_name": "Naa Ready Dhaan",
+            "singers_name": "Vijay, Anirudh Ravichander, Asal Kolaru",
+            "audios": "/assets/songs-assets/songs-audios/Naa-Ready-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 1
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/bloody sweet.jpg",
+            "movie_name": "LEO",
+            "song_name": "Bloody Sweet",
+            "singers_name": "Vijay, Anirudh Ravichander, Asal Kolaru",
+            "audios": "/assets/songs-assets/songs-audios/Bloody-Sweet-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "movieName": "Vikram - II",
+        "Vikram - II": [
+          {
+            "images": "/assets/songs-assets/songs-images/VikramOST.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Plata Pablo Theme",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/Pablo-Sandhanam-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 3
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Agent-Tina.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Agent Tina Theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Agent-Tina-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 4
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Agent-Vikram.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Agent Vikram",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/Agent-Vikram-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 5
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Amar and Gayathri Marriage.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Marriage Theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Marriage-At-2AM-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 6
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Agent-Amar.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Agent Amar Theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Amar-Theme-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 7
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Ghost Unmasked.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Ghost Unmasked",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/Ghost-Unmasked-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 8
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Lokiverse Theme.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Lokiverse Theme",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/Lokiverse-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 9
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Porkanda Singam.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Porkanda Singam",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Porkanda-Singam-EDM-Version-(Additional-Song)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 10
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Rolex-Theme.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Rolex's Theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Rolex-Theme-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 11
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Sandhanam-Vikram.png",
+            "movie_name": "Vikram - II",
+            "song_name": "Sandhanam's Theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Sandhanam-Theme-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 12
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/Shield Fight.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "The Shield fight",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Shield-Fight-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 13
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/The Name is Vikram.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "Name is Vikram",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/The-Name-is-Vikram-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 14
+          },
+          {
+            "images": "/assets/songs-assets/songs-images/VikramOST.jpg",
+            "movie_name": "Vikram - II",
+            "song_name": "What's Cookin",
+            "singers_name": "Anirudh Ravichander, Kamal Haasan",
+            "audios": "/assets/songs-assets/songs-audios/What's-Cookin_-(Background-Score)-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 15
+          }
+        ]
+      },
+      {
+        "movieName": "Jailer",
+        "Jailer": [
+          {
+            "images": "/assets/songs-assets/songs-images/Jailer.jpg",
+            "movie_name": "Jailer",
+            "song_name": "Muthuvel theme",
+            "singers_name": "Anirudh Ravichander",
+            "audios": "/assets/songs-assets/songs-audios/Jailer-Announcement-Theme-MassTamilan.dev.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 16
+          }
+        ]
+      },
+      {
+        "movieName": "Master",
+        "Master": [
+          {
+            "images": "/assets/songs-assets/songs-images/Master.jpg",
+            "movie_name": "Master",
+            "song_name": "JD The Alcoholic",
+            "singers_name": "Anirudh Ravichander, Vijay",
+            "audios": "/assets/songs-assets/songs-audios/JD-The-Alcoholic-MassTamilan.io.mp3",
+            "duration": "04:30",
+            "isLiked": false,
+            "id": 17
+          }
+        ]
+      }
+    ],
+    "mixedSongs": [
+      {
+        "images": "/assets/songs-assets/songs-images/2.jpg",
+        "movie_name": "Navarasa",
+        "song_name": "Thooriga",
+        "singers_name": "Surya",
+        "audios": "/assets/songs-assets/songs-audios/2.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 1
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/3.jpg",
+        "movie_name": "Sita Ramam",
+        "song_name": "Kurumugil",
+        "singers_name": "Charan",
+        "audios": "/assets/songs-assets/songs-audios/3.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 2
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/4.jpg",
+        "movie_name": "Love Today",
+        "song_name": "Ennai Vittu",
+        "singers_name": "Yuvan Shankar Raja",
+        "audios": "/assets/songs-assets/songs-audios/4.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 3
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/6.jpg",
+        "movie_name": "Premam",
+        "song_name": "Aazhuva Puzhuva",
+        "singers_name": "Hariharan",
+        "audios": "/assets/songs-assets/songs-audios/6.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 4
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/7.jpg",
+        "movie_name": "Thiruchitrambalam",
+        "song_name": "Megham Karukatha",
+        "singers_name": "Dhanush, Anirudh Ravichander",
+        "audios": "/assets/songs-assets/songs-audios/7.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 5
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/8.jpg",
+        "movie_name": "Varisu",
+        "song_name": "Ranjithamaey",
+        "singers_name": "Vijay, Anirudh Ravichander",
+        "audios": "/assets/songs-assets/songs-audios/8.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 6
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/9.jpg",
+        "movie_name": "Ponniyin Selvan -I",
+        "song_name": "Ponni Nadhi",
+        "singers_name": "A.R.Rahman",
+        "audios": "/assets/songs-assets/songs-audios/9.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 7
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/11.jpg",
+        "movie_name": "Beast",
+        "song_name": "Halamathi Habiboo",
+        "singers_name": "Anirudh Ravichander, Vijay",
+        "audios": "/assets/songs-assets/songs-audios/11.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 8
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/12.jpg",
+        "movie_name": "Naane Varuven",
+        "song_name": "Rendu Raaja",
+        "singers_name": "Dhanush, Yuvan Shankar Raja",
+        "audios": "/assets/songs-assets/songs-audios/12.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 9
+      },
+      {
+        "images": "/assets/songs-assets/songs-images/14.jpg",
+        "movie_name": "Maragadha Nanayam",
+        "song_name": "Nee Kavidhaigala",
+        "singers_name": "Pradheep Kumar",
+        "audios": "/assets/songs-assets/songs-audios/14.mp3",
+        "duration": "04:30",
+        "isLiked": false,
+        "id": 10
+      }
+    ]
+  }
