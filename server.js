@@ -24,7 +24,26 @@ const migrateSongsToMongoDB = require("./api/songsAPIs/migrateSongsToMongoDB");
 const uploadAllSongstoDatabase = require("./api/songsAPIs/uploadAllSongstoDatabase");
 
 const app = express();
-app.use(cors({ origin: "*" }));
+const allowedOrigins = [`http://localhost:4200`];
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+app.use((req, res, next) => {
+  console.log("Origin:", req.headers.origin);
+  next();
+});
+
 app.use(bodyparser.json());
 // migrateSongsToMongoDB();
 // uploadAllSongstoDatabase();
