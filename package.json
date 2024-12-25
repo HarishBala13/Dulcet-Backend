@@ -24,6 +24,7 @@
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
-    "stream": "^0.0.3"
+    "stream": "^0.0.3",
+    "winston": "^3.17.0"
   }
 }

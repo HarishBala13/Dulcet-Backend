@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const cors = require("cors");
-const fs = require("fs");
-const jwt = require("jsonwebtoken");
 
 require("dotenv").config();
 
@@ -16,15 +14,16 @@ const {
   songsAudioUpload,
   userProfileUpload,
 } = require("./controllers/ImageController");
+const LoggerController = require("./controllers/LoggerController");
 
 const audioFileUpload = require("./api/imageAPIs/songsAudioUpload");
 const imageFileUpload = require("./api/imageAPIs/songsImageUpload");
 const userProfileFileUpload = require("./api/imageAPIs/userProfileUpload");
-const migrateSongsToMongoDB = require("./api/songsAPIs/migrateSongsToMongoDB");
-const uploadAllSongstoDatabase = require("./api/songsAPIs/uploadAllSongstoDatabase");
 
 const app = express();
+
 const allowedOrigins = [`http://localhost:4200`];
+
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -39,15 +38,13 @@ app.use(
     credentials: true,
   })
 );
+
 app.use((req, res, next) => {
   console.log("Origin:", req.headers.origin);
   next();
 });
 
 app.use(bodyparser.json());
-// migrateSongsToMongoDB();
-// uploadAllSongstoDatabase();
-// uploadAllSongstoDatabase.displayFileWithID("676aea4646207ccbbe52118c");
 
 // Songs - Images Storage REST API CALL
 app.post(
@@ -63,6 +60,7 @@ app.post(
   songsAudioUpload
 );
 
+// Testing for Render site it's working or not
 app.get("/audioUpload", (req, res) => {
   res.sendFile(__dirname + "/audioUpload.html");
 });
@@ -83,37 +81,38 @@ app.post("/sendForgotPassEmail", ForgotPassEmail);
 // SendRegisteredPremiumPlanEmail REST API CALL
 app.post("/sendRegisteredPremiumPlanEmail", RegisteredPremiumPlanEmail);
 
-app.post("/migrateSongsToMongoDB", migrateSongsToMongoDB);
-
 // Authenticating users by using JWT REST API CALL
 // not yet implemented
 
-// Logger file REST API CALL
-app.post("/updateLogInexpress", (req, res) => {
-  const logMessage = req.body.logMessage;
-  const logtype = req.body.logMessagetype;
-  const loggedTime = req.body.logMessageDate;
+// Logger file REST API CALL in server side and stores logs in MongoDB collections (logEntries)
+app.post("/updateLogInexpress", LoggerController);
 
-  fs.appendFile(
-    "DulcetLogs.log",
-    logMessage +
-      " on " +
-      new Date() +
-      `and it's an ` +
-      logtype +
-      " message Message Status ---> " +
-      logtype +
-      "\n",
-    (err) => {
-      if (err) {
-        console.error("Error writing log:", err);
-        return res.status(500).json({ error: "Error writing log" });
-      }
-      console.log("Log written successfully:", logMessage);
-      res.status(200).json({ message: "Log written successfully" });
-    }
-  );
-});
+// Old method of calling API and storing logs locally
+// app.post("/updateLogInexpress", (req, res) => {
+//   const logMessage = req.body.logMessage;
+//   const logtype = req.body.logMessagetype;
+//   const loggedTime = req.body.logMessageDate;
+
+//   fs.appendFile(
+//     "DulcetLogs.log",
+//     logMessage +
+//       " on " +
+//       new Date() +
+//       `and it's an ` +
+//       logtype +
+//       " message Message Status ---> " +
+//       logtype +
+//       "\n",
+//     (err) => {
+//       if (err) {
+//         console.error("Error writing log:", err);
+//         return res.status(500).json({ error: "Error writing log" });
+//       }
+//       console.log("Log written successfully:", logMessage);
+//       res.status(200).json({ message: "Log written successfully" });
+//     }
+//   );
+// });
 
 app.listen(process.env.PORT, (req, res, err) => {
   console.log(`Dulcet Project Backend Server Starts @${process.env.PORT}`);
