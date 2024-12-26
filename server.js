@@ -14,12 +14,26 @@ const {
   songsAudioUpload,
   userProfileUpload,
 } = require("./controllers/ImageController");
+
 const LoggerController = require("./controllers/LoggerController");
 
 const audioFileUpload = require("./api/imageAPIs/songsAudioUpload");
 const imageFileUpload = require("./api/imageAPIs/songsImageUpload");
 const userProfileFileUpload = require("./api/imageAPIs/userProfileUpload");
+
 const fetchRegisteredUser = require("./api/userAPI/fetchRegisteredUser");
+
+const fetchTopSongs = require("./api/songsAPIs/fetchTopSongs");
+const fetchMixedSongs = require("./api/songsAPIs/fetchMixedSongs");
+
+const fetchStates = require("./api/paymentAPIs/fetchStates");
+const fetchMasterCard = require("./api/paymentAPIs/fetchMasterCard");
+const fetchVisaCards = require("./api/paymentAPIs/fetchVisaCards");
+
+const fetchSearchBoxes = require("./api/searchBoxAPIs/fetchSearchBoxes");
+
+const fetchPremium = require("./api/premiumAPIs/fetchPremium");
+
 
 const app = express();
 
@@ -47,16 +61,38 @@ app.use((req, res, next) => {
 
 app.use(bodyparser.json());
 
-app.use("/usersregister", fetchRegisteredUser);
+// Users - Fetching users from MongoDB REST API GET CALL
+app.get("/usersregister", fetchRegisteredUser);
 
-// Songs - Images Storage REST API CALL
+// Songs - Fetching mixedSongs from MongoDB REST API GET CALL
+app.get("/mixedSongs", fetchMixedSongs);
+
+// Songs - Fetching topSongs from MongoDB REST API GET CALL
+app.get("/topSongs", fetchTopSongs);
+
+// Search Boxes - Fetching searchBoxes from MongoDB REST API GET CALL
+app.get("/searchBoxes", fetchSearchBoxes);
+
+// Premium - Fetching premium from MongoDB REST API GET CALL
+app.get("/premium", fetchPremium);
+
+// Payment - Fetching visa cards from MongoDB REST API GET CALL
+app.get("/Visa", fetchVisaCards);
+
+// Payment - Fetching master card from MongoDB REST API GET CALL
+app.get("/Mastercard", fetchMasterCard);
+
+// Payment - Fetching states from MongoDB REST API GET CALL
+app.get("/states", fetchStates);
+
+// Songs - Images Storage REST API POST CALL
 app.post(
   "/songsImageUpload",
   imageFileUpload.single("imageFiles"),
   songsImageUpload
 );
 
-// Songs - Audios Storage REST API CALL
+// Songs - Audios Storage REST API POST CALL
 app.post(
   "/songsAudioUpload",
   audioFileUpload.single("audioFiles"),
@@ -68,27 +104,27 @@ app.get("/audioUpload", (req, res) => {
   res.sendFile(__dirname + "/audioUpload.html");
 });
 
-// Songs - User Image Storage REST API CALL
+// Songs - User Image Storage REST API POST CALL
 app.post(
   "/userProfileUpload",
   userProfileFileUpload.single("userProfile"),
   userProfileUpload
 );
 
-// Send User Register Email REST API CALL
+// Send User Register Email REST API PODT CALL
 app.post("/sendRegisterEmail", RegisterEmail);
 
-// Send User ForgotPassword Email REST API CALL
+// Send User ForgotPassword Email REST API POST CALL
 app.post("/sendForgotPassEmail", ForgotPassEmail);
 
-// SendRegisteredPremiumPlanEmail REST API CALL
+// SendRegisteredPremiumPlanEmail REST API POST CALL
 app.post("/sendRegisteredPremiumPlanEmail", RegisteredPremiumPlanEmail);
+
+// Logger file REST API POST CALL in server side and stores logs in MongoDB collections (logEntries)
+app.post("/updateLogInexpress", LoggerController);
 
 // Authenticating users by using JWT REST API CALL
 // not yet implemented
-
-// Logger file REST API CALL in server side and stores logs in MongoDB collections (logEntries)
-app.post("/updateLogInexpress", LoggerController);
 
 // Old method of calling API and storing logs locally
 // app.post("/updateLogInexpress", (req, res) => {

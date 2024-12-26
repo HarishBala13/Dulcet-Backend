@@ -7,7 +7,7 @@ const databaseName = process.env.MONGODB_DATABASE_NAME;
 
 const client = new MongoClient(mongoUrl);
 
-async function sendLoggerInfo(message) {
+async function sendInfoLog(message) {
   try {
     await client.connect();
 
@@ -50,9 +50,9 @@ async function sendLoggerInfo(message) {
 
     return logger;
   } catch (error) {
-    console.error("Error in sendLoggerInfo:", error);
+    console.error("Error in sendInfoLog:", error);
     throw error; // Re-throw error so that it can be handled by the caller
   }
 }
 
-module.exports = sendLoggerInfo;
+module.exports = sendInfoLog;

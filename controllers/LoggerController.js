@@ -1,9 +1,9 @@
-const sendLoggerInfo = require("../api/loggerAPI/sendInfoLog");
+const sendInfoLog = require("../api/loggerAPI/sendInfoLog");
 
 const LoggerController = async (req, res) => {
   try {
     const message = req.body;
-    const logger = await sendLoggerInfo(message);
+    const logger = await sendInfoLog(message);
 
     logger.info(message.logMessage);
 
