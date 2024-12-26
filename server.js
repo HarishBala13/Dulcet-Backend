@@ -47,7 +47,7 @@ app.use((req, res, next) => {
 
 app.use(bodyparser.json());
 
-app.get("/usersregister", fetchRegisteredUser);
+app.use("/usersregister", fetchRegisteredUser);
 
 // Songs - Images Storage REST API CALL
 app.post(
